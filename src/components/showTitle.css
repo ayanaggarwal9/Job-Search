@@ -1,0 +1,19 @@
+.card-style{
+list-style: none;
+background-color: rgb(176, 228, 230);
+margin: 5px 0;
+
+}
+.list-style{
+    list-style: none;
+    padding-left: 0;
+}
+.fas{
+    color: #116275;
+}
+.fas:hover{
+  cursor: pointer;
+}
+.card-body{
+    color: #004085;
+}

@@ -1,0 +1,67 @@
+body {
+  /* background: linear-gradient(-135deg, #fae37d, #e799ff, #8ecef3); */
+  min-height: 100vh;
+}
+.container {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  width: 600px;
+  height: 400px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  border-left: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.container .header .navbar-brand {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0px;
+  text-shadow: 1px 1px rgba(214, 214, 214, 0.733);
+}
+
+.edit-body {
+  background-color: white;
+  height: calc(100vh - 70px);
+  padding: 20px 50px 20px;
+}
+.container .header {
+  min-height: 70px;
+  padding: 0rem 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.edit-area {
+  padding: 20px;
+}
+/* .edit-area:first-child{
+    border-bottom: 1px solid #d765fa;  
+} */
+label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #d765fa;
+  margin-right: 20px;
+}
+input,
+textarea {
+  width: 85%;
+  outline: none;
+  border: 1px solid #8ecef3;
+  border-radius: 12px;
+  padding: 5px;
+  color: #28739e;
+  font-size: 0.7rem;
+}
+
+.btn-save {
+  background: linear-gradient(-135deg, #e799ff, #8ecef3);
+  margin: 10px;
+}
+.fas {
+  color: #28739e;
+  font-size: 22px;
+}
