@@ -6,7 +6,6 @@ import EditJobTitle from '../components/EditJobTitle';
 
 
 const App = () =>{
- 
     return (
     <React.Fragment> 
       <Router>

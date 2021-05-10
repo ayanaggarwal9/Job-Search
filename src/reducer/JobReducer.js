@@ -66,7 +66,7 @@ const jobReducer = (state = initialState, action) => {
 
         case REQUEST_USERDATA:
             return Object.assign({}, state, {
-                selectedUser: state.jobs[action.id]
+                selectedUser: state.jobs[action.id-1] 
             });
 
         default:

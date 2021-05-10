@@ -1,14 +1,12 @@
 import React from 'react';
 import './showTitle.css';
 import Navbar from './Navbar';
-// import Modal from './Modal.js';
 import { fetchJobs } from '../actions/actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 class ShowJobTitle extends React.Component {
-
-    componentDidMount() {
+  componentDidMount() {
         if(this.props.jobs.length === 0){
             this.props.fetchJobs();
         }
