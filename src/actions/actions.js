@@ -15,48 +15,42 @@ function requestJobs() {
         type: REQUEST_JOBS,
     };
 }
-
 function receiveJobs(json) {
     return {
         type: RECEIVE_JOBS,
         jobs: json,
     };
 }
-
 function receiveJobsErr(error) {
     return {
         type: RECEIVE_JOBS_ERROR,
         error,
     };
 }
-
 export function editUserData(user) {
     return {
         type: EDIT_USERDATA,
         user,
     };
 }
-
 export function requestUserData(id) {
     return {
         type: REQUEST_USERDATA,
         id
     };
 }
-
 export function saveUserData(user) {
     return {
         type: SAVE_USERDATA,
         user
     };
 }
-export function searchMatchingJobs(title){
+export function searchMatchingJobs(title) {
     return {
         type: SEARCH_MATCHING_JOBS,
         title
     };
 }
-
 export function fetchJobs() {
     return dispatch => {
         dispatch(requestJobs());

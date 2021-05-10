@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import '../styles/autocomplete.css';
 import { connect } from 'react-redux';
 import { searchMatchingJobs } from '../actions/actions';
 
 export class Autocomplete extends Component {
- 
     state = {
         activeOption: 0,
         filteredOptions: [],
         showOptions: false,
         userInput: ''
     };
-
     onChange = (e) => {
         console.log('onChanges');
 
@@ -23,16 +20,14 @@ export class Autocomplete extends Component {
             (optionName) =>
                 optionName.title.toLowerCase().indexOf(userInput.toLowerCase()) > -1
         );
-
         this.setState({
             activeOption: 0,
             filteredOptions,
             showOptions: true,
             userInput: e.currentTarget.value
         });
-        
-    };
 
+    };
     onClick = (e) => {
         this.setState({
             activeOption: 0,
@@ -122,7 +117,7 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = dispatch => {
     return {
-        searchMatchingJobs: (userInput) =>dispatch(searchMatchingJobs(userInput)) 
+        searchMatchingJobs: (userInput) => dispatch(searchMatchingJobs(userInput))
     }
 }
 

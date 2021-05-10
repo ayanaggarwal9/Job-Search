@@ -10,7 +10,7 @@ class EditJobTitle extends React.Component {
         title: '', body: ''
     }
     editUserData = () => {
-        let editedUser = this.props.selectedUser.find(user=>user.id==this.props.match.params.id )
+        let editedUser = this.props.selectedUser.find(user => user.id == this.props.match.params.id)
         this.props.editUserData({
             id: editedUser.id,
             userId: editedUser.userId,
@@ -24,7 +24,7 @@ class EditJobTitle extends React.Component {
         this.setState({ title: e.target.value })
     }
     componentDidMount() {
-        let userJob = this.props.selectedUser.find(x=>x.id==this.props.match.params.id )
+        let userJob = this.props.selectedUser.find(x => x.id == this.props.match.params.id)
         this.setState({
             title: userJob.title,
             body: userJob.body
@@ -52,7 +52,7 @@ class EditJobTitle extends React.Component {
                         <textarea rows='3' value={this.state.body} onChange={this.handleBodyChange} />
                     </div>
                     <div className='d-flex flex-row-reverse'>
-                        <Link to='/'> <button className='btn btn-save' onClick={this.editUserData} >EDIT</button></Link>
+                        <Link to='/'> <button className='btn btn-save' onClick={this.editUserData}>UPDATE</button></Link>
                         <Link to='/'> <button className='btn btn-save'  >Cancel</button></Link>
 
                     </div>
@@ -72,12 +72,11 @@ const mapDispatchToProps = dispatch => {
         editUserData: (user) => dispatch(editUserData(user))
     }
 }
-
 EditJobTitle.propTypes = {
     match: PropTypes.shape({
         params: PropTypes.shape({
-          id: PropTypes.string.isRequired
+            id: PropTypes.string.isRequired
         })
-      })
-  }
+    })
+}
 export default connect(mapStateToProps, mapDispatchToProps)(EditJobTitle);

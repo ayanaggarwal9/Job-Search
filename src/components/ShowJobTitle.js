@@ -6,13 +6,12 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 class ShowJobTitle extends React.Component {
-  componentDidMount() {
-        if(this.props.jobs.length === 0){
+    componentDidMount() {
+        if (this.props.jobs.length === 0) {
             this.props.fetchJobs();
         }
     }
     render() {
-
         const jobTiles = this.props.filteredJobs.map((job) => {
             return (
                 <li key={job.id}>
@@ -39,12 +38,11 @@ class ShowJobTitle extends React.Component {
 }
 const mapDispatchToProps = dispatch => {
     return {
-        fetchJobs: ()=>dispatch(fetchJobs())
+        fetchJobs: () => dispatch(fetchJobs())
     }
 }
-
 const mapStateToProps = state => {
-    let {filteredJobs , jobs } = state;
+    let { filteredJobs, jobs } = state;
     return {
         filteredJobs, jobs
     }
